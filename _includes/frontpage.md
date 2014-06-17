@@ -18,7 +18,7 @@ Install Grunt:
 
 ```sudo npm install```
 
-##Runnint Grunt Tasks
+##Running Grunt Tasks
 Grunt for this project needs to be refined.
 
 Build the site:

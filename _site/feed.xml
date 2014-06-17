@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>David&#39;s Jekyll Bootstrap</title>
-    <description>This is David&#39;s Jekyll Site</description>
-    <link>http://yourdomain.com/jekyll-bootstrap/</link>
-    <atom:link href="http://yourdomain.com/jekyll-bootstrap/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Rorys Jekyll Bootstrap</title>
+    <description>This is Rorys Jekyll Site</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Welcome to Jekyll!</title>
@@ -19,8 +19,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</guid>
+        <link>http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</guid>
       </item>
     
       <item>
@@ -36,8 +36,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/welcome-to-jekyll/</guid>
+        <link>http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll/</guid>
       </item>
     
       <item>
@@ -53,8 +53,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/mindless-jabber/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/mindless-jabber/</guid>
+        <link>http://yourdomain.com/jekyll/update/2014/06/08/mindless-jabber/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/mindless-jabber/</guid>
       </item>
     
       <item>
@@ -70,16 +70,16 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/hello-world/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/hello-world/</guid>
+        <link>http://yourdomain.com/jekyll/update/2014/06/08/hello-world/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/hello-world/</guid>
       </item>
     
       <item>
         <title>Another. Post.</title>
         <description>&lt;p&gt;Some nonsense. &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;jekyll-gh&lt;/a&gt; &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;&lt;/p&gt;</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/another-post/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll-bootstrap/jekyll/update/2014/06/08/another-post/</guid>
+        <link>http://yourdomain.com/jekyll/update/2014/06/08/another-post/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/another-post/</guid>
       </item>
     
   </channel>
