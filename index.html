@@ -1,0 +1,56 @@
+---
+layout: default
+title: Blogging Like a Hacker
+---
+
+<div class="home">
+<h1>Using This Template</h1>
+
+Clone this repo:
+
+<p><code>git clone https://github.com/DavidCWebs/jekyll-bootstrap.git</code></p>
+
+Rename the new "jekyll-bootstrap" directory:
+
+<p><code>mv jekyll-bootstrap new-site</code></p>
+
+Move to the new directory:
+
+<p><code>cd new-site</code></p>
+
+Install Grunt:
+
+<p><code>sudo npm install</code></p>
+
+<h2>Running Grunt Tasks</h2>
+Grunt for this project needs to be refined. The command grunt exec isn't working properly - it doesn't build the site.
+
+Build the site:
+<p><code>grunt</code></p>
+
+Serve and watch:
+<code>grunt exec</code>
+
+<h2>Notes</h2>
+<ul>
+    <li>This project has a base url setting in _config.yml</li>
+    <li>Running grunt compiles app/assets/_less/style.less to css/style.css</li>
+    <li>Bootstrap (and other styles) are imported into style.less</li>
+    <li>Add styles to app/assets/_less/style.less
+</li>
+</ul>
+
+  <h2>Posts</h2>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
