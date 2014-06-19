@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rorys Jekyll Bootstrap</title>
+    <title>Rory&#39;s Jekyll Bootstrap</title>
     <description>This is Rorys Jekyll Site</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Favicon Post</title>
+        <description>&lt;p&gt;Icons with the page content in place for a blog home page, individual blog pages, and on-page styling, it’s time to turn our attention to some of the small details that show you really care. Let’s make an icon to appear in people’s bookmarks and at the top of the browser: the favicon.&lt;/p&gt;
+
+&lt;p&gt;When making a favicon, it’s worth keeping in mind that it’s going to be really small. Select something, whether it’s your logo, or a symbol that represents it. In my case I chose to put together the letters SI to stand for Shop Ireland. The result is this:&lt;/p&gt;
+
+&lt;p&gt;favicon_example&lt;/p&gt;
+
+&lt;p&gt;It’s a favicon.ico file and is sized 16 by 16 pixels.&lt;/p&gt;
+
+&lt;p&gt;To make this, begin with a square canvas in Photoshop or your editor of choice. It’s usually easier to start with something bigger than 16 pixels (I would suggest about 500px by 500px), and we’ll scale it down later. Once you’ve assembled an image, the quickest way to generate the favicon itself is to upload it to Iconifier.&lt;/p&gt;
+
+&lt;p&gt;It will shrink the file down to 16 pixels and you can then download the resulting .ico file. Place this file in the root of your blog project.&lt;/p&gt;
+
+&lt;p&gt;With that made, the following line in the head of your HTML will direct the browser to look for it:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya!! nnnnn qwertyryh&lt;/p&gt;</description>
+        <pubDate>Wed, 18 Jun 2014 12:54:44 +0000</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2014/06/18/favicon-post/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/18/favicon-post/</guid>
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>

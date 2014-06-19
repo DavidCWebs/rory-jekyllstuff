@@ -12,7 +12,7 @@ grunt.initConfig({
       }
     }
   },*/
-  
+
   less: {
 			development: {
 				options: {
@@ -29,7 +29,7 @@ grunt.initConfig({
 		files: "css/*.less",
 		tasks: ["less"]
 	},
-  
+
  uglify: {
     jquery: {
       files: {
@@ -45,7 +45,7 @@ grunt.initConfig({
       }
     }
   },
-  
+
   copy: {
     bootstrap: {
       files: [
