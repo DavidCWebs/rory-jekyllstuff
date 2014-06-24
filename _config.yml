@@ -8,6 +8,19 @@ url: "http://yourdomain.com"
 # Build settings
 #markdown: kramdown
 permalink: pretty
+version: 1
+image:
+  source: assets
+  output: generated
+  presets:
+    users:
+      attr:
+        class: img-responsive
+        itemprop: image
+      width: 350
+    half:
+      width: 500
+      height: 500
 
 # Uncomment if you are planning to run the blog in a subdirectory
 # Note - if you enable this, and attempt to view your site locally you have to use the baseurl in your local path.

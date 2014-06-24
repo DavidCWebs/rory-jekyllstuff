@@ -13,6 +13,10 @@ When making a favicon, it’s worth keeping in mind that it’s going to be real
 favicon_example
 
 It’s a favicon.ico file and is sized 16 by 16 pixels.
+<div class="row">
+<div class="col-md-6" style="background-color: #000; color:#fff;">TEST</div>
+<div class="col-md-6">{% image Caribbean_reef_shark.jpg class="img-responsive" %}</div>
+</div>
 
 To make this, begin with a square canvas in Photoshop or your editor of choice. It’s usually easier to start with something bigger than 16 pixels (I would suggest about 500px by 500px), and we’ll scale it down later. Once you’ve assembled an image, the quickest way to generate the favicon itself is to upload it to Iconifier.
 
@@ -20,6 +24,5 @@ It will shrink the file down to 16 pixels and you can then download the resultin
 
 With that made, the following line in the head of your HTML will direct the browser to look for it:
 
-```<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico```
-
-Ya!! nnnnn qwertyryh
+```<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico>```
+{% image Caribbean_reef_shark.jpg class="img-responsive" %}
