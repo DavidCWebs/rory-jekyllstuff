@@ -25,4 +25,4 @@ It will shrink the file down to 16 pixels and you can then download the resultin
 With that made, the following line in the head of your HTML will direct the browser to look for it:
 
 ```<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico>```
-{% image Caribbean_reef_shark.jpg class="img-responsive" %}
+{% image 300x300 Caribbean_reef_shark.jpg class="img-responsive" %}

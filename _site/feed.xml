@@ -3,108 +3,181 @@
   <channel>
     <title>Rory&#39;s Jekyll Bootstrap</title>
     <description>This is Rorys Jekyll Site</description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Responsive Images in a Jekyll post</title>
+        <description>&lt;p&gt;How to add a responsive image to a Jekyll post:&lt;/p&gt;
+
+&lt;p&gt;Create a folder called assets in the root directory of your project, into which any images, downloads or any other assets are placed. They can then be linked to in the post.&lt;/p&gt;
+
+&lt;p&gt;Install jekyll-image-tag. This requires both Minimagick and Imagemagick to work.&lt;/p&gt;
+
+&lt;p&gt;You can install Minimagick with the command:
+&lt;code&gt;sudo gem install jekyll-minimagick&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In a plugin file within your projects _plugins directory add:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;# _plugins/my-plugin.rb
+require &amp;quot;jekyll-minimagick&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Define presets in your _config.yml file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;     image:
+        source: assets
+         output: generated
+        presets:
+            users:
+            attr:
+            class: img-responsive
+            itemprop: image
+        width: 350
+        half:
+    width: 500
+    height: 500
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you have the requirements installed, download jekyll-image-tag and copy image_tag.rb to your Jekyll _plugins folder.&lt;/p&gt;
+
+&lt;p&gt;Link the image from your assets folder to your post using the format:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;{% image preset or WxH path/to/img.jpg attr=&amp;quot;value&amp;quot; %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;My code looked like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;{% image 300x300 Caribbean_reef_shark.jpg class=&amp;quot;img-responsive&amp;quot; %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Thu, 26 Jun 2014 12:54:44 +0000</pubDate>
+        <link>/jekyll/update/2014/06/26/responsive-images/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/26/responsive-images/</guid>
+      </item>
     
       <item>
         <title>Favicon Post</title>
-        <description>&lt;p&gt;Icons with the page content in place for a blog home page, individual blog pages, and on-page styling, it’s time to turn our attention to some of the small details that show you really care. Let’s make an icon to appear in people’s bookmarks and at the top of the browser: the favicon.&lt;/p&gt;
+        <description>&lt;p&gt;Icons
+with the page content in place for a blog home page, individual blog pages, and on-page styling, it’s time to turn our attention to some of the small details that show you really care. Let’s make an icon to appear in people’s bookmarks and at the top of the browser: the favicon.&lt;/p&gt;
 
 &lt;p&gt;When making a favicon, it’s worth keeping in mind that it’s going to be really small. Select something, whether it’s your logo, or a symbol that represents it. In my case I chose to put together the letters SI to stand for Shop Ireland. The result is this:&lt;/p&gt;
 
 &lt;p&gt;favicon_example&lt;/p&gt;
 
-&lt;p&gt;It’s a favicon.ico file and is sized 16 by 16 pixels.&lt;/p&gt;
-&lt;div class=&#39;row&#39;&gt;
-&lt;div class=&#39;col-md-6&#39; style=&#39;background-color: #000; color:#fff;&#39;&gt;TEST&lt;/div&gt;
-&lt;div class=&#39;col-md-6&#39;&gt;&lt;img class=&#39;img-responsive&#39; src=&#39;/generated/Caribbean_reef_shark-1968x1228-04fe21.jpg&#39; /&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;It’s a favicon.ico file and is sized 16 by 16 pixels.
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-6&quot; style=&quot;background-color: #000; color:#fff;&quot;&gt;TEST&lt;/div&gt;
+&lt;div class=&quot;col-md-6&quot;&gt;&lt;img src=&quot;/generated/Caribbean_reef_shark-1968x1228-04fe21.jpg&quot; class=&quot;img-responsive&quot; &gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
 &lt;p&gt;To make this, begin with a square canvas in Photoshop or your editor of choice. It’s usually easier to start with something bigger than 16 pixels (I would suggest about 500px by 500px), and we’ll scale it down later. Once you’ve assembled an image, the quickest way to generate the favicon itself is to upload it to Iconifier.&lt;/p&gt;
 
 &lt;p&gt;It will shrink the file down to 16 pixels and you can then download the resulting .ico file. Place this file in the root of your blog project.&lt;/p&gt;
 
 &lt;p&gt;With that made, the following line in the head of your HTML will direct the browser to look for it:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&amp;gt;&lt;/code&gt; &lt;img class=&#39;img-responsive&#39; src=&#39;/generated/Caribbean_reef_shark-1968x1228-04fe21.jpg&#39; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&amp;gt;&lt;/code&gt;
+&lt;img src=&quot;/generated/Caribbean_reef_shark-300x300-04fe21.jpg&quot; class=&quot;img-responsive&quot; &gt;&lt;/p&gt;
+</description>
         <pubDate>Wed, 18 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/06/18/favicon-post/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/18/favicon-post/</guid>
+        <link>/jekyll/update/2014/06/18/favicon-post/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/18/favicon-post/</guid>
       </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+        <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;def&lt;/span&gt; &lt;span class=&#39;nf&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-  &lt;span class=&#39;nb&#39;&gt;puts&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&#39;si&#39;&gt;#{&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;si&#39;&gt;}&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
-&lt;span class=&#39;n&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-&lt;span class=&#39;c1&#39;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&amp;#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</guid>
+        <link>/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/08/welcome-to-jekyll+%28another+copy%29/</guid>
       </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+        <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;def&lt;/span&gt; &lt;span class=&#39;nf&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-  &lt;span class=&#39;nb&#39;&gt;puts&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&#39;si&#39;&gt;#{&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;si&#39;&gt;}&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
-&lt;span class=&#39;n&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-&lt;span class=&#39;c1&#39;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&amp;#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/welcome-to-jekyll/</guid>
+        <link>/jekyll/update/2014/06/08/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/08/welcome-to-jekyll/</guid>
       </item>
     
       <item>
         <title>Mindless Jabber!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+        <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;def&lt;/span&gt; &lt;span class=&#39;nf&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-  &lt;span class=&#39;nb&#39;&gt;puts&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&#39;si&#39;&gt;#{&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;si&#39;&gt;}&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
-&lt;span class=&#39;n&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-&lt;span class=&#39;c1&#39;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&amp;#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/06/08/mindless-jabber/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/mindless-jabber/</guid>
+        <link>/jekyll/update/2014/06/08/mindless-jabber/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/08/mindless-jabber/</guid>
       </item>
     
       <item>
         <title>Well ello!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+        <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;def&lt;/span&gt; &lt;span class=&#39;nf&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-  &lt;span class=&#39;nb&#39;&gt;puts&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&#39;si&#39;&gt;#{&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;name&lt;/span&gt;&lt;span class=&#39;si&#39;&gt;}&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
-&lt;span class=&#39;n&#39;&gt;print_hi&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
-&lt;span class=&#39;c1&#39;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&amp;#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/06/08/hello-world/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/hello-world/</guid>
+        <link>/jekyll/update/2014/06/08/hello-world/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/08/hello-world/</guid>
       </item>
     
       <item>
         <title>Another. Post.</title>
-        <description>&lt;p&gt;Some nonsense. &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;jekyll-gh&lt;/a&gt; &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;&lt;/p&gt;</description>
+        <description>&lt;p&gt;Some nonsense.
+&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;jekyll-gh&lt;/a&gt;
+&lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;&lt;/p&gt;
+</description>
         <pubDate>Sun, 08 Jun 2014 12:54:44 +0000</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/06/08/another-post/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/06/08/another-post/</guid>
+        <link>/jekyll/update/2014/06/08/another-post/</link>
+        <guid isPermaLink="true">/jekyll/update/2014/06/08/another-post/</guid>
       </item>
     
   </channel>

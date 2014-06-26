@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Favicon Post</title>
+    <title>Responsive Images in a Jekyll post</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="This is Rorys Jekyll Site">
-    <link rel="canonical" href="/jekyll/update/2014/06/18/favicon-post/">
+    <link rel="canonical" href="/jekyll/update/2014/06/26/responsive-images/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?1">
@@ -109,32 +109,53 @@
           <div class="post">
 
   <header class="post-header">
-    <h1>Favicon Post</h1>
-    <p class="meta">Jun 18, 2014</p>
+    <h1>Responsive Images in a Jekyll post</h1>
+    <p class="meta">Jun 26, 2014</p>
   </header>
 
   <article class="post-content">
-  <p>Icons
-with the page content in place for a blog home page, individual blog pages, and on-page styling, it’s time to turn our attention to some of the small details that show you really care. Let’s make an icon to appear in people’s bookmarks and at the top of the browser: the favicon.</p>
+  <p>How to add a responsive image to a Jekyll post:</p>
 
-<p>When making a favicon, it’s worth keeping in mind that it’s going to be really small. Select something, whether it’s your logo, or a symbol that represents it. In my case I chose to put together the letters SI to stand for Shop Ireland. The result is this:</p>
+<p>Create a folder called assets in the root directory of your project, into which any images, downloads or any other assets are placed. They can then be linked to in the post.</p>
 
-<p>favicon_example</p>
+<p>Install jekyll-image-tag. This requires both Minimagick and Imagemagick to work.</p>
 
-<p>It’s a favicon.ico file and is sized 16 by 16 pixels.
-<div class="row">
-<div class="col-md-6" style="background-color: #000; color:#fff;">TEST</div>
-<div class="col-md-6"><img src="/generated/Caribbean_reef_shark-1968x1228-04fe21.jpg" class="img-responsive" ></div>
-</div></p>
+<p>You can install Minimagick with the command:
+<code>sudo gem install jekyll-minimagick</code></p>
 
-<p>To make this, begin with a square canvas in Photoshop or your editor of choice. It’s usually easier to start with something bigger than 16 pixels (I would suggest about 500px by 500px), and we’ll scale it down later. Once you’ve assembled an image, the quickest way to generate the favicon itself is to upload it to Iconifier.</p>
+<p>In a plugin file within your projects _plugins directory add:</p>
 
-<p>It will shrink the file down to 16 pixels and you can then download the resulting .ico file. Place this file in the root of your blog project.</p>
+<div class="highlight"><pre><code class="html"># _plugins/my-plugin.rb
+require &quot;jekyll-minimagick&quot;
+</code></pre></div>
 
-<p>With that made, the following line in the head of your HTML will direct the browser to look for it:</p>
+<p>Define presets in your _config.yml file:</p>
 
-<p><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;/favicon.ico&gt;</code>
-<img src="/generated/Caribbean_reef_shark-300x300-04fe21.jpg" class="img-responsive" ></p>
+<div class="highlight"><pre><code class="html">     image:
+        source: assets
+         output: generated
+        presets:
+            users:
+            attr:
+            class: img-responsive
+            itemprop: image
+        width: 350
+        half:
+    width: 500
+    height: 500
+</code></pre></div>
+
+<p>Once you have the requirements installed, download jekyll-image-tag and copy image_tag.rb to your Jekyll _plugins folder.</p>
+
+<p>Link the image from your assets folder to your post using the format:</p>
+
+<div class="highlight"><pre><code class="html">{% image preset or WxH path/to/img.jpg attr=&quot;value&quot; %}
+</code></pre></div>
+
+<p>My code looked like this:</p>
+
+<div class="highlight"><pre><code class="html">{% image 300x300 Caribbean_reef_shark.jpg class=&quot;img-responsive&quot; %}
+</code></pre></div>
 
   </article>
 

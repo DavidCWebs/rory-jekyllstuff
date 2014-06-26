@@ -3,10 +3,10 @@ title: Rory's Jekyll Bootstrap
 email: your-email@domain.com
 description: "This is Rorys Jekyll Site"
 baseurl: ""
-url: "http://yourdomain.com"
+#url: "http://yourdomain.com"
 
 # Build settings
-#markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 version: 1
 image:
